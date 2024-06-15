@@ -18,6 +18,7 @@
         "plugin:@typescript-eslint/recommended-type-checked"
     ],
     "ignorePatterns": [
+        "*.mjs",
         "dist/",
         "node_modules/",
         "build/",

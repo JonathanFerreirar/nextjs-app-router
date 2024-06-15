@@ -36,6 +36,7 @@
     "exclude": [
         "plopfile.js",
         "node_modules",
-        "next.config.mjs"
+        "next.config.mjs",
+        "__test__/*"
     ]
 }
