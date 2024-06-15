@@ -10,6 +10,13 @@ build_command="pnpm run build"
 
 if ! $test_command; then
   printf "%b\n"  "${RED}error: tests failed. Fix the tests issues before pushing.${NC}" >&2
+    if ! $build_command; then
+        printf "%b\n"  "${RED}error: Build failed. Fix the build issues before pushing.${NC}" >&2
+        exit 1
+    else
+        printf "%b\n"  "${GREEN}Build: succeeded. Processing and Pushing...${NC}" >&2
+        exit 0
+    fi
   exit 1
 else
   printf "%b\n"  "${GREEN}All tests: succeeded. Processing and continuing...${NC}" >&2
@@ -17,10 +24,3 @@ else
 fi
 
 
-if ! $build_command; then
-  printf "%b\n"  "${RED}error: Build failed. Fix the build issues before pushing.${NC}" >&2
-  exit 1
-else
-  printf "%b\n"  "${GREEN}Build: succeeded. Processing and Pushing...${NC}" >&2
-  exit 0
-fi
