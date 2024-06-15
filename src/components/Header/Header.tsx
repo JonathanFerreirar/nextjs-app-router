@@ -1,5 +1,5 @@
 import React from 'react'
 
-export const Header = () => {
-  return <div>Header</div>
+export const header = () => {
+  return <div>header</div>
 }

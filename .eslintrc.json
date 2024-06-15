@@ -5,6 +5,7 @@
     },
     "plugins": [
         "tailwindcss",
+        "prefer-arrow",
         "simple-import-sort",
         "@typescript-eslint"
     ],
@@ -17,6 +18,16 @@
         "plugin:@typescript-eslint/recommended-type-checked"
     ],
     "rules": {
+        "prefer-arrow/prefer-arrow-functions": [
+            "error",
+            {
+                "disallowPrototype": true,
+                "singleReturnOnly": false,
+                "classPropertiesAllowed": false
+            }
+        ],
+        "import/export": "off",
+        "react/function-component-definition": "off",
         "tailwindcss/classnames-order": "warn",
         "@typescript-eslint/consistent-type-definitions": [
             "error",

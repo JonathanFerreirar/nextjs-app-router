@@ -1,5 +1,3 @@
-//@ts-nocheck
-
 export default function (plop) {
     plop.setGenerator('component', {
         description: 'component on components folder',
@@ -9,7 +7,7 @@ export default function (plop) {
                 name: 'name',
                 message: 'type the component name',
                 filter(input) {
-                    return input.charAt(0).toUpperCase() + input.slice(1);
+                    return input.charAt(0).toLowerCase() + input.slice(1);
                 },
             },
         ],
@@ -31,7 +29,7 @@ export default function (plop) {
                 name: 'path',
                 message: 'type the component path',
                 filter(input) {
-                    return input.charAt(0).toUpperCase() + input.slice(1);
+                    return input.charAt(0).toLowerCase() + input.slice(1);
                 },
             },
             {
@@ -39,7 +37,7 @@ export default function (plop) {
                 name: 'name',
                 message: 'type the component name',
                 filter(input) {
-                    return input.charAt(0).toUpperCase() + input.slice(1);
+                    return input.charAt(0).toLowerCase() + input.slice(1);
                 },
             },
         ],
