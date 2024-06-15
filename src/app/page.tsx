@@ -1,3 +1,4 @@
+import Button from '@/components/button/button';
 import { postHogEventServe } from '@/posthog/actions';
 
 const Home = () => {
@@ -8,7 +9,7 @@ const Home = () => {
 
   return (
       <main className='flex min-h-screen flex-col items-center justify-between p-24'>
-          <h1>Ok nice day</h1>
+          <Button>Everything working nice</Button>
       </main>
   );
 };

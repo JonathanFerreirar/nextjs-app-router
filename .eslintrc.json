@@ -17,6 +17,14 @@
         "plugin:tailwindcss/recommended",
         "plugin:@typescript-eslint/recommended-type-checked"
     ],
+    "ignorePatterns": [
+        "dist/",
+        "node_modules/",
+        "build/",
+        "*.config.js",
+        "*.config.ts",
+        "*setup.ts"
+    ],
     "rules": {
         "prefer-arrow/prefer-arrow-functions": [
             "error",
@@ -26,6 +34,7 @@
                 "classPropertiesAllowed": false
             }
         ],
+        "import/prefer-default-export": "off",
         "react/require-default-props": "off",
         "react/jsx-props-no-spreading": "off",
         "import/export": "off",
@@ -100,5 +109,16 @@
                 ]
             }
         ]
-    }
+    },
+    "overrides": [
+        {
+            "files": [
+                "*.tsx",
+                "*.jsx"
+            ],
+            "rules": {
+                "import/prefer-default-export": "error"
+            }
+        }
+    ]
 }
