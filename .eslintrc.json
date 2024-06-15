@@ -1,3 +1,91 @@
 {
-  "extends": "next/core-web-vitals"
+    "parser": "@typescript-eslint/parser",
+    "parserOptions": {
+        "project": true
+    },
+    "plugins": [
+        "tailwindcss",
+        "simple-import-sort",
+        "@typescript-eslint"
+    ],
+    "extends": [
+        "prettier",
+        "airbnb",
+        "airbnb/hooks",
+        "next/core-web-vitals",
+        "plugin:tailwindcss/recommended",
+        "plugin:@typescript-eslint/recommended-type-checked"
+    ],
+    "rules": {
+        "tailwindcss/classnames-order": "warn",
+        "@typescript-eslint/consistent-type-definitions": [
+            "error",
+            "type"
+        ],
+        "import/no-extraneous-dependencies": "off",
+        "quotes": "error",
+        "react/jsx-indent": [
+            "error",
+            4
+        ],
+        "react/jsx-fragments": [
+            "error",
+            "element"
+        ],
+        "no-restricted-syntax": [
+            "error",
+            {
+                "selector": "ImportDeclaration[source.value='react'] ImportSpecifier",
+                "message": "Import React hooks as part of the default React import, INSTEADE `import React, { useState } from 'react' useState(); USE React.useState()`."
+            }
+        ],
+        "jsx-quotes": [
+            "error",
+            "prefer-single"
+        ],
+        "import/extensions": "off",
+        "react/react-in-jsx-scope": "off",
+        "react/jsx-filename-extension": "off",
+        "simple-import-sort/imports": [
+            "error",
+            {
+                "groups": [
+                    // Primeiro grupo para arquivos CSS
+                    [
+                        "^.+\\.?(css)$"
+                    ],
+                    // Segundo grupo para pacotes React, Next.js e outros pacotes de npm
+                    [
+                        "^react",
+                        "^next",
+                        "^react-icons",
+                        "^@?\\w"
+                    ],
+                    // Terceiro grupo para pacotes internos com o prefixo @/ ou components
+                    [
+                        "^(@|components)(/.*|$)"
+                    ],
+                    // Grupo para imports de tipo (TypeScript)
+                    [
+                        "^type"
+                    ],
+                    // Quarto grupo para imports que envolvem módulos esm
+                    [
+                        "^\\u0000"
+                    ],
+                    // Quinto grupo para imports relativos de pastas pai
+                    [
+                        "^\\.\\.(?!/?$)",
+                        "^\\.\\./?$"
+                    ],
+                    // Sexto grupo para imports relativos de pastas atuais
+                    [
+                        "^\\./(?=.*/)(?!/?$)",
+                        "^\\.(?!/?$)",
+                        "^\\./?$"
+                    ]
+                ]
+            }
+        ]
+    }
 }
