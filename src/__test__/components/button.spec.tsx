@@ -1,4 +1,4 @@
-import { render, screen } from '@testing-library/react';
+import { fireEvent, render, screen } from '@testing-library/react';
 
 import Button from '@/components/button/button';
 
@@ -9,6 +9,8 @@ describe(' Component', () => {
     render(<Button onClick={buttonClick}>Button</Button>);
 
     const containerElement = screen.getByTestId('test_button');
+
+    fireEvent.click(containerElement);
 
     expect(buttonClick).toHaveBeenCalled();
     expect(buttonClick).toHaveBeenCalledTimes(1);

@@ -4,7 +4,18 @@ RED='\033[0;31m'
 GREEN='\033[0;32m'
 NC='\033[0m'
 
+test_command="pnpm run test:build"
 build_command="pnpm run build"
+
+
+if ! $test_command; then
+  printf "%b\n"  "${RED}error: tests failed. Fix the tests issues before pushing.${NC}" >&2
+  exit 1
+else
+  printf "%b\n"  "${GREEN}All tests: succeeded. Processing and continuing...${NC}" >&2
+  exit 0
+fi
+
 
 if ! $build_command; then
   printf "%b\n"  "${RED}error: Build failed. Fix the build issues before pushing.${NC}" >&2

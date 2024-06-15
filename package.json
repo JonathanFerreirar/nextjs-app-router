@@ -17,7 +17,8 @@
     "ngrok": "ngrok http localhost:3000",
     "preupdate": "npx --yes only-allow pnpm",
     "ui:add": "pnpm dlx shadcn-ui@latest add",
-    "test:watch": "jest --watch --coverage --detectOpenHandles"
+    "test:watch": "jest --watch --coverage --detectOpenHandles",
+    "test:build": "jest --passWithNoTests --detectOpenHandles --runInBand"
   },
   "dependencies": {
     "@radix-ui/react-slot": "^1.0.2",

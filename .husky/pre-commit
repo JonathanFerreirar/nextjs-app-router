@@ -1,5 +1,4 @@
 #!/bin/sh
 . "$(dirname "$0")/_/husky.sh"
 
-jest --passWithNoTests --detectOpenHandles --findRelatedTests --runInBand
 pnpm run lint --fix
