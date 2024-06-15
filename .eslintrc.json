@@ -26,6 +26,8 @@
                 "classPropertiesAllowed": false
             }
         ],
+        "react/require-default-props": "off",
+        "react/jsx-props-no-spreading": "off",
         "import/export": "off",
         "react/function-component-definition": "off",
         "tailwindcss/classnames-order": "warn",

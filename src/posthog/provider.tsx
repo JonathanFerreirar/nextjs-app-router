@@ -12,10 +12,10 @@ if (typeof window !== 'undefined') {
   });
 }
 
-export default function PostHogProvider({
+const PostHogProvider = ({
   children,
 }: {
     children: React.ReactNode;
-}) {
-  return <Provider client={posthog}>{children}</Provider>;
-}
+}) => <Provider client={posthog}>{children}</Provider>;
+
+export default PostHogProvider;
