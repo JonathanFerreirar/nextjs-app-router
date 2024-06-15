@@ -17,8 +17,9 @@
     "ui:add": "pnpm dlx shadcn-ui@latest add"
   },
   "lint-staged": {
-    "**.{ts,tsx}": [
-      "pnpm run lint --fix"
+    "*.{js,ts,tsx}": [
+      "npx eslint 'src/**/*.{js,ts,tsx}' --fix",
+      "prettier --write"
     ]
   },
   "dependencies": {

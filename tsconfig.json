@@ -31,9 +31,11 @@
         "next-env.d.ts",
         "**/*.ts",
         "**/*.tsx",
-        ".next/types/**/*.ts"
+        ".next/types/**/*.ts",
+        "plopfile.js"
     ],
     "exclude": [
+        "plopfile.js",
         "node_modules",
         "next.config.mjs"
     ]

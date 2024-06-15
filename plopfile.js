@@ -1,6 +1,6 @@
-import { NodePlopAPI } from 'plop';
+//@ts-nocheck
 
-export default function plopConfig(plop: NodePlopAPI) {
+export default function (plop) {
     plop.setGenerator('component', {
         description: 'component on components folder',
         prompts: [
@@ -8,7 +8,7 @@ export default function plopConfig(plop: NodePlopAPI) {
                 type: 'input',
                 name: 'name',
                 message: 'type the component name',
-                filter(input: string) {
+                filter(input) {
                     return input.charAt(0).toUpperCase() + input.slice(1);
                 },
             },
@@ -30,7 +30,7 @@ export default function plopConfig(plop: NodePlopAPI) {
                 type: 'input',
                 name: 'path',
                 message: 'type the component path',
-                filter(input: string) {
+                filter(input) {
                     return input.charAt(0).toUpperCase() + input.slice(1);
                 },
             },
@@ -38,7 +38,7 @@ export default function plopConfig(plop: NodePlopAPI) {
                 type: 'input',
                 name: 'name',
                 message: 'type the component name',
-                filter(input: string) {
+                filter(input) {
                     return input.charAt(0).toUpperCase() + input.slice(1);
                 },
             },
