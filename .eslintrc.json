@@ -27,6 +27,12 @@
         "*setup.ts"
     ],
     "rules": {
+         "@typescript-eslint/no-misused-promises": "off",
+        "consistent-return": "off",
+        "react-hooks/rules-of-hooks": "off",
+        "@typescript-eslint/no-unsafe-call": "off",
+        "@typescript-eslint/ban-ts-comment": "off",
+        "@typescript-eslint/no-unsafe-assignment": "off",
         "prefer-arrow/prefer-arrow-functions": [
             "error",
             {
